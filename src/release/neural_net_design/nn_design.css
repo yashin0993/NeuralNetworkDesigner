@@ -1,0 +1,237 @@
+*{
+    box-sizing : border-box;
+    margin     : 0;
+    padding    : 0;
+    font-family: "meiryo UI";
+    overflow   : hidden;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+input[type="checkbox"], input[type="radio"]{
+    display: none;
+}
+
+#top_bar{
+    height     : 22px;
+    background : #EEEEEE;
+    border-top : 1px solid #CCCCCC;
+    display    : flex;
+}
+
+input[type="checkbox"] + label + .child{
+    position   : fixed;
+    height     : 0px;
+    background : #EEEEEE;
+}
+input[type="checkbox"]:checked + label + .child{
+    height     : auto;
+}
+
+.root-label{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.root-label:hover{
+    background: #CCCCCC;
+}
+.child-menu{
+    padding-left: 5px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.child-menu:hover{
+    background: #CCCCCC;
+}
+
+
+.top-menu{
+    text-align  : center;
+    width       : 50px;
+    height      : 20px;
+    line-height : 18px;
+}
+
+input[type="checkbox"] + #menu_tab{
+    position   : absolute;
+    width      : 25px;
+    height     : 65px;
+    left       : 0px;
+    top        : 22px;
+    background : url("./design/menu.svg");
+    transition-duration: 0.2s;
+}
+input[type="checkbox"]:checked + #menu_tab{
+    left       : 200px;
+    transition-duration: 0.2s;
+}
+input[type="checkbox"] + #menu_tab + #menu{
+    position   : absolute;
+    width      : 0px;
+    height     : 100%;
+    top        : 22px;
+    background : rgba(50,50,70,0.5);
+    transition-duration: 0.2s;
+}
+input[type="checkbox"]:checked + #menu_tab + #menu{
+    width      : 200px;
+    transition-duration: 0.2s;
+}
+
+
+.side-radio{
+    display : none;
+}
+
+.menu-label{
+    display       : block;
+    color         : #DDD;
+    line-height   : 30px;
+    border-bottom : 1px solid #CCC;
+}
+.menu-label:hover{
+    background : #8f9a9f;
+    color      : #FFF;
+}
+
+.acc-box{
+    width  : 100%;
+    height : 0px;
+    transition-duration : 1s;    
+}
+
+input[type=checkbox]:checked + .menu-label + .acc-box{
+    transition-duration : 1s;
+    height : auto;
+}
+
+.box-menu{
+    display       : block;
+    height        : 30px;
+    color         : #DDD;
+    background    : #4e565e;
+    border-bottom : 1px solid #CCC;
+}
+
+#svg_wrap, #canvas{
+    width  : 100%;
+    height : 100%;
+}
+
+#canvas{
+    background : #AAAAAA;
+}
+
+#drag_screen{
+    fill :#556677;
+}
+
+#setting_wrap{
+    width      : 100%;
+    height     : 100%;
+    background : #EEEEEE;
+    padding    : 10px;
+}
+
+#setting_header{
+    width  : 100%;
+    height : calc(100% - 32px);
+}
+
+.setting-row{
+    padding    : 3px;
+    text-align : center;
+}
+
+.setting-key{
+    display    : inline-block;
+    width      : 40%;
+    text-align : center;
+}
+
+#setting_footer{
+    display         : flex;
+    justify-content : flex-end;
+    height          : 32px;
+    width           : 100%;
+}
+
+.setting-btn{
+    display       : block;
+    width         : 60px;
+    height        : 30px;
+    line-height   : 25px;
+    border        : 1px solid #AAA;
+    text-align    : center;
+    margin-right  : 10px;
+    border-radius : 10px;
+}
+.setting-btn:hover{
+    background : #AAA;
+    color      : #EEEEEE;
+}
+
+input, select{
+    width: 50%;
+}
+.save-pop{
+    transition : 10s;
+    width      : 200px;
+    height     : 100px;
+    background : #333;
+    position   : absolute;
+    top        : 20px;
+    left       : 50%;
+    opacity    : 0.7;
+    text-align : center;
+    line-height: 50px;
+    color      : white;
+}
+.on{
+    height : 50px;
+}
+
+#setting_icon{
+    position           : absolute;
+    right              : 1px;
+    top                : 21px;
+    width              : 48px;
+    padding            : 5px;
+    margin             : 5px;
+    opacity            : 0.5;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+#setting_icon:hover{
+    width              : 50px;
+    right              : 0;
+    top                : 20px;
+    border             : 1px solid white;
+    border-radius      : 7px;
+    opacity            : 1;
+    transition-duration: 0.2s;
+}
+
+#config_bg{
+    position  : absolute;
+    top       : 0;
+    width     : 100%;
+    height    : 100%;
+    background: rgba(50,50,50,0.5);
+    text-align: center;
+}
+
+#setting_board{
+    position  : absolute;
+    width     : 500px;
+    height    : 400px;
+    top       : calc(50% - 250px);
+    left      : calc(50% - 200px);
+    background: whitesmoke;
+    padding   : 10px;
+}
+

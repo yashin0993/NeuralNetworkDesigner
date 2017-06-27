@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../design/commonUI.css"/>
+        <link rel="stylesheet" href="./camera.css"/>
+        <script src="../train_data_maker/setting_data.js"></script>
+    </head>
+    <body>
+        <div id="display">
+            <video id="camera"></video>
+            <canvas id="screen"></canvas>
+            <canvas id="box_screen"></canvas>
+        </div>
+        <div id="btn_menu">
+            <label class="common-btn" onClick="webcam_connect()">connect</label>
+            <label class="common-btn" onClick="webcam_disconnect()">disconnect</label>
+            <!--<label class="common-btn" onClick="webcam_stop()">stop</label>-->
+        </div>
+    </body>
+    <script src="./camera.js"></script>
+</html>

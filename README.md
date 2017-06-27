@@ -1,2 +1,27 @@
-# NeuralNetworkDesigner
-This application help designing Neural Network with layer GUI.
+NeuralNetworkCreater
+============================
+
+
+概要
+-------------------
+chainerを利用したニューラルネットワーク設計アプリケーション。
+主な機能として
+
+* ネットワーク設計
+* ネットワーク結合設計(未実装)
+* 学習データセット作成
+* 学習
+* 推定
+* webカメラ推定
+
+がある。
+
+環境構築
+-------------------
+
+#### インストール
+* Node.js(6.5.0)
+   * electron(1.4.14)
+* Python(3.5)
+   * chainer(1.23.0)
+   * opencv(3.1.0)

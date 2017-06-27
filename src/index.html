@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title id="app_title">Neural Network Designer</title>
+        <meta charset="utf-8">
+        <script src="./data/fontlist.js"></script>
+        <link rel="stylesheet" href="./app/design/commonUI.css"/>
+        <link rel="stylesheet" href="./index.css"/>
+    </head>
+    <body>
+        <div id="body_wrap">
+            <!--トップメニュー-->
+            <div id="top_bar">
+                <img id="main_menu" class="off" src="./app/design/menu.png" onClick="OpenSideMenu()"></img>
+                <label id="top_logo" onClick="SideClick(-1)">OCR</label>
+            </div>
+
+            <!--サイドメニュー-->
+            <div id="side_menu" class="side-menu-close">
+                <div class="side-label" onClick="SideClick(0)">Layer Setting</div>
+                <div class="side-label" onClick="SideClick(4)">Network Setting</div>
+                <div class="side-label" onClick="SideClick(1)">Make Training Data</div>
+                <div class="side-label" onClick="SideClick(2)">Training</div>
+                <div class="side-label" onClick="SideClick(3)">Predict</div>
+                <div class="side-label" onClick="SideClick(5)">WebCamera</div>
+            </div>
+
+            <!--メイン画面-->
+            <iframe id="main_view" src="./app/project/project.html"></iframe>
+        </div>
+    </body>
+    <script src="./app/request_controller.js"></script>
+    <script src="./app/design/UIcontroller.js"></script>
+</html>

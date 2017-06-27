@@ -1,0 +1,79 @@
+
+html, body{
+    width  : 100%;
+    height : 100%;
+}
+p{
+    font-size : 26px;
+    padding   : 5px 0px;
+}
+#title{
+    height         : 100px; 
+    font-size      : 48;
+    text-align     : center;
+    vertical-align : middle;
+}
+#new_proj{
+    display     : block; 
+    width       : 120px; 
+    margin-left : calc(100% - 140px);
+    background  : #FF44CC;
+    border      : 1px solid #FF44CC; 
+}
+#new_proj:hover{
+    background: #FF66EE;
+    border     : 1px solid #FF66EE; 
+}
+#menu_wrap{
+    text-align : center;
+}
+.project-div{
+    height        : 50px;
+    line-height   : 50px;
+    border-top    : 1px solid #bbbbbb;
+    border-bottom : 1px solid #bbbbbb;
+}
+.btn{
+    display : block;
+    margin  : 20px;
+}
+
+#create_check{
+    display: none;
+}
+#create_check + #project_register{
+    position   : absolute;
+    width      : 100%;
+    height     : 0px;
+    top        : 50%;
+    background : rgba(50,50,50,0.5);
+    z-index    : 10;
+    transition-duration: 0.2s;
+}
+#create_check:checked + #project_register{
+    height : 100%;
+    top    : 0;
+    transition-duration: 0.2s;
+}
+
+#regist_form{
+    position        : absolute;
+    top             : calc(50% - 75px); 
+    left            : calc(50% - 225px);
+    margin          : 0 auto;
+    width           : 450px; 
+    height          : 150px;
+    background      : #DDDDDD;
+    border-radius   : 10px;
+    text-align      : center; 
+}
+#project_name{
+    display       : block;
+    width         : 80%;
+    margin        : 0 auto;
+    margin-bottom : 30px;
+    color         : black; 
+}
+#form_btn{
+    width: 80px;
+}

@@ -1,0 +1,948 @@
+{
+    "transform": {
+        "x": -198.12873743489342,
+        "y": 20.365826340063023,
+        "scale": 0.8705505632961253
+    },
+    "nodes": [
+        {
+            "id": 0,
+            "name": "input",
+            "pos": {
+                "x": 342,
+                "y": 149
+            },
+            "settings": {
+                "channel": 1,
+                "dimension": 3,
+                "height": 28,
+                "name": 0,
+                "width": 28
+            },
+            "type": "input"
+        },
+        {
+            "id": 1,
+            "name": "output",
+            "pos": {
+                "x": 1412,
+                "y": 810
+            },
+            "settings": {
+                "in_channels": 71,
+                "name": 0,
+                "output_size": 10
+            },
+            "type": "output"
+        },
+        {
+            "id": 2,
+            "name": "Affine2",
+            "pos": {
+                "x": 1035,
+                "y": 810
+            },
+            "settings": {
+                "in_channels": 100,
+                "name": 0,
+                "out_channels": 71
+            },
+            "type": "Affine"
+        },
+        {
+            "id": 3,
+            "name": "Affine1",
+            "pos": {
+                "x": 479,
+                "y": 810
+            },
+            "settings": {
+                "in_channels": 32,
+                "name": 0,
+                "out_channels": 100
+            },
+            "type": "Affine"
+        },
+        {
+            "id": 4,
+            "name": "active7",
+            "pos": {
+                "x": 599,
+                "y": 810
+            },
+            "settings": {
+                "in_channels": 100,
+                "name": 0,
+                "type": "relu"
+            },
+            "type": "Activation"
+        },
+        {
+            "id": 5,
+            "name": "LRN1",
+            "pos": {
+                "x": 604,
+                "y": 149
+            },
+            "settings": {
+                "in_channels": 8,
+                "name": 0
+            },
+            "type": "LRN"
+        },
+        {
+            "id": 6,
+            "name": "dropout2",
+            "pos": {
+                "x": 1155,
+                "y": 810
+            },
+            "settings": {
+                "in_channels": 71,
+                "name": 0,
+                "rate": 0.5
+            },
+            "type": "Dropout"
+        },
+        {
+            "id": 7,
+            "name": "dropout1",
+            "pos": {
+                "x": 726,
+                "y": 810
+            },
+            "settings": {
+                "in_channels": 100,
+                "name": 0,
+                "rate": 0.5
+            },
+            "type": "Dropout"
+        },
+        {
+            "id": 8,
+            "name": "conv1",
+            "pos": {
+                "x": 495,
+                "y": 149
+            },
+            "settings": {
+                "filter_size": 3,
+                "in_channels": 1,
+                "name": 0,
+                "out_channels": 8,
+                "padding": 1,
+                "stride": 1
+            },
+            "type": "convolution"
+        },
+        {
+            "id": 9,
+            "name": "active1",
+            "pos": {
+                "x": 728.9308483057009,
+                "y": 150.61425603179248
+            },
+            "settings": {
+                "in_channels": 8,
+                "name": 0,
+                "type": "relu"
+            },
+            "type": "Activation"
+        },
+        {
+            "id": 10,
+            "name": "conv3",
+            "pos": {
+                "x": 492,
+                "y": 360
+            },
+            "settings": {
+                "filter_size": 3,
+                "in_channels": 8,
+                "name": 0,
+                "out_channels": 16,
+                "padding": 1,
+                "stride": 1
+            },
+            "type": "convolution"
+        },
+        {
+            "id": 11,
+            "name": "conv2",
+            "pos": {
+                "x": 900.7273217664788,
+                "y": 148.91054385647038
+            },
+            "settings": {
+                "filter_size": 3,
+                "in_channels": 8,
+                "name": 0,
+                "out_channels": 8,
+                "padding": 1,
+                "stride": 1
+            },
+            "type": "convolution"
+        },
+        {
+            "id": 12,
+            "name": "LRN2",
+            "pos": {
+                "x": 1015,
+                "y": 149
+            },
+            "settings": {
+                "in_channels": 8,
+                "name": 0
+            },
+            "type": "LRN"
+        },
+        {
+            "id": 13,
+            "name": "active2",
+            "pos": {
+                "x": 1124,
+                "y": 149
+            },
+            "settings": {
+                "in_channels": 8,
+                "name": 0,
+                "type": "relu"
+            },
+            "type": "Activation"
+        },
+        {
+            "id": 15,
+            "name": "pool1",
+            "pos": {
+                "x": 1282,
+                "y": 149
+            },
+            "settings": {
+                "height": 2,
+                "in_channels": 8,
+                "name": 0,
+                "stride": 2,
+                "width": 2
+            },
+            "type": "pooling"
+        },
+        {
+            "id": 16,
+            "name": "LRN3",
+            "pos": {
+                "x": 601,
+                "y": 360
+            },
+            "settings": {
+                "in_channels": 16,
+                "name": 0
+            },
+            "type": "LRN"
+        },
+        {
+            "id": 17,
+            "name": "active3",
+            "pos": {
+                "x": 718,
+                "y": 360
+            },
+            "settings": {
+                "in_channels": 16,
+                "name": 0,
+                "type": "relu"
+            },
+            "type": "Activation"
+        },
+        {
+            "id": 18,
+            "name": "conv4",
+            "pos": {
+                "x": 911,
+                "y": 360
+            },
+            "settings": {
+                "filter_size": 3,
+                "in_channels": 16,
+                "name": 0,
+                "out_channels": 16,
+                "padding": 1,
+                "stride": 1
+            },
+            "type": "convolution"
+        },
+        {
+            "id": 19,
+            "name": "LRN4",
+            "pos": {
+                "x": 1031.6789428787388,
+                "y": 361.4197477932268
+            },
+            "settings": {
+                "in_channels": 16,
+                "name": 0
+            },
+            "type": "LRN"
+        },
+        {
+            "id": 20,
+            "name": "active4",
+            "pos": {
+                "x": 1126,
+                "y": 360
+            },
+            "settings": {
+                "in_channels": 16,
+                "name": 0,
+                "type": "relu"
+            },
+            "type": "Activation"
+        },
+        {
+            "id": 21,
+            "name": "pool2",
+            "pos": {
+                "x": 1282,
+                "y": 360
+            },
+            "settings": {
+                "height": 2,
+                "in_channels": 16,
+                "name": 0,
+                "stride": 2,
+                "width": 2
+            },
+            "type": "pooling"
+        },
+        {
+            "id": 22,
+            "name": "conv5",
+            "pos": {
+                "x": 487,
+                "y": 587
+            },
+            "settings": {
+                "filter_size": 3,
+                "in_channels": 16,
+                "name": 0,
+                "out_channels": 32,
+                "padding": 1,
+                "stride": 1
+            },
+            "type": "convolution"
+        },
+        {
+            "id": 23,
+            "name": "LRN5",
+            "pos": {
+                "x": 600,
+                "y": 587
+            },
+            "settings": {
+                "in_channels": 32,
+                "name": 0
+            },
+            "type": "LRN"
+        },
+        {
+            "id": 24,
+            "name": "active5",
+            "pos": {
+                "x": 717,
+                "y": 587
+            },
+            "settings": {
+                "in_channels": 32,
+                "name": 0,
+                "type": "relu"
+            },
+            "type": "Activation"
+        },
+        {
+            "id": 25,
+            "name": "conv6",
+            "pos": {
+                "x": 916.8090963363647,
+                "y": 585.415886759758
+            },
+            "settings": {
+                "filter_size": 3,
+                "in_channels": 32,
+                "name": 0,
+                "out_channels": 32,
+                "padding": 1,
+                "stride": 1
+            },
+            "type": "convolution"
+        },
+        {
+            "id": 26,
+            "name": "LRN6",
+            "pos": {
+                "x": 1016,
+                "y": 587
+            },
+            "settings": {
+                "in_channels": 32,
+                "name": 0
+            },
+            "type": "LRN"
+        },
+        {
+            "id": 27,
+            "name": "active6",
+            "pos": {
+                "x": 1125,
+                "y": 587
+            },
+            "settings": {
+                "in_channels": 32,
+                "name": 0,
+                "type": "relu"
+            },
+            "type": "Activation"
+        },
+        {
+            "id": 28,
+            "name": "pool3",
+            "pos": {
+                "x": 1276,
+                "y": 587
+            },
+            "settings": {
+                "height": 2,
+                "in_channels": 32,
+                "name": 0,
+                "stride": 2,
+                "width": 2
+            },
+            "type": "pooling"
+        }
+    ],
+    "edges": [
+        {
+            "from": 3,
+            "id": 3,
+            "to": 4
+        },
+        {
+            "from": 0,
+            "id": 5,
+            "to": 8
+        },
+        {
+            "from": 8,
+            "id": 6,
+            "to": 5
+        },
+        {
+            "from": 5,
+            "id": 7,
+            "to": 9
+        },
+        {
+            "from": 9,
+            "id": 8,
+            "to": 11
+        },
+        {
+            "from": 11,
+            "id": 9,
+            "to": 12
+        },
+        {
+            "from": 12,
+            "id": 10,
+            "to": 13
+        },
+        {
+            "from": 13,
+            "id": 11,
+            "to": 15
+        },
+        {
+            "from": 15,
+            "id": 12,
+            "to": 10
+        },
+        {
+            "from": 10,
+            "id": 13,
+            "to": 16
+        },
+        {
+            "from": 16,
+            "id": 14,
+            "to": 17
+        },
+        {
+            "from": 17,
+            "id": 15,
+            "to": 18
+        },
+        {
+            "from": 18,
+            "id": 16,
+            "to": 19
+        },
+        {
+            "from": 19,
+            "id": 17,
+            "to": 20
+        },
+        {
+            "from": 20,
+            "id": 18,
+            "to": 21
+        },
+        {
+            "from": 4,
+            "id": 20,
+            "to": 7
+        },
+        {
+            "from": 7,
+            "id": 21,
+            "to": 2
+        },
+        {
+            "from": 2,
+            "id": 22,
+            "to": 6
+        },
+        {
+            "from": 6,
+            "id": 23,
+            "to": 1
+        },
+        {
+            "from": 21,
+            "id": 24,
+            "to": 22
+        },
+        {
+            "from": 22,
+            "id": 25,
+            "to": 23
+        },
+        {
+            "from": 23,
+            "id": 26,
+            "to": 24
+        },
+        {
+            "from": 24,
+            "id": 27,
+            "to": 25
+        },
+        {
+            "from": 25,
+            "id": 28,
+            "to": 26
+        },
+        {
+            "from": 26,
+            "id": 29,
+            "to": 27
+        },
+        {
+            "from": 27,
+            "id": 30,
+            "to": 28
+        },
+        {
+            "from": 28,
+            "id": 31,
+            "to": 3
+        }
+    ],
+    "layer_info": [
+        {
+            "id": 8,
+            "name": "conv1",
+            "pos": {
+                "x": 495,
+                "y": 149
+            },
+            "settings": {
+                "filter_size": 3,
+                "in_channels": 1,
+                "name": 0,
+                "out_channels": 8,
+                "padding": 1,
+                "stride": 1
+            },
+            "type": "convolution"
+        },
+        {
+            "id": 5,
+            "name": "LRN1",
+            "pos": {
+                "x": 604,
+                "y": 149
+            },
+            "settings": {
+                "in_channels": 8,
+                "name": 0
+            },
+            "type": "LRN"
+        },
+        {
+            "id": 9,
+            "name": "active1",
+            "pos": {
+                "x": 728.9308483057009,
+                "y": 150.61425603179248
+            },
+            "settings": {
+                "in_channels": 8,
+                "name": 0,
+                "type": "relu"
+            },
+            "type": "Activation"
+        },
+        {
+            "id": 11,
+            "name": "conv2",
+            "pos": {
+                "x": 900.7273217664788,
+                "y": 148.91054385647038
+            },
+            "settings": {
+                "filter_size": 3,
+                "in_channels": 8,
+                "name": 0,
+                "out_channels": 8,
+                "padding": 1,
+                "stride": 1
+            },
+            "type": "convolution"
+        },
+        {
+            "id": 12,
+            "name": "LRN2",
+            "pos": {
+                "x": 1015,
+                "y": 149
+            },
+            "settings": {
+                "in_channels": 8,
+                "name": 0
+            },
+            "type": "LRN"
+        },
+        {
+            "id": 13,
+            "name": "active2",
+            "pos": {
+                "x": 1124,
+                "y": 149
+            },
+            "settings": {
+                "in_channels": 8,
+                "name": 0,
+                "type": "relu"
+            },
+            "type": "Activation"
+        },
+        {
+            "id": 15,
+            "name": "pool1",
+            "pos": {
+                "x": 1282,
+                "y": 149
+            },
+            "settings": {
+                "height": 2,
+                "in_channels": 8,
+                "name": 0,
+                "stride": 2,
+                "width": 2
+            },
+            "type": "pooling"
+        },
+        {
+            "id": 10,
+            "name": "conv3",
+            "pos": {
+                "x": 492,
+                "y": 360
+            },
+            "settings": {
+                "filter_size": 3,
+                "in_channels": 8,
+                "name": 0,
+                "out_channels": 16,
+                "padding": 1,
+                "stride": 1
+            },
+            "type": "convolution"
+        },
+        {
+            "id": 16,
+            "name": "LRN3",
+            "pos": {
+                "x": 601,
+                "y": 360
+            },
+            "settings": {
+                "in_channels": 16,
+                "name": 0
+            },
+            "type": "LRN"
+        },
+        {
+            "id": 17,
+            "name": "active3",
+            "pos": {
+                "x": 718,
+                "y": 360
+            },
+            "settings": {
+                "in_channels": 16,
+                "name": 0,
+                "type": "relu"
+            },
+            "type": "Activation"
+        },
+        {
+            "id": 18,
+            "name": "conv4",
+            "pos": {
+                "x": 911,
+                "y": 360
+            },
+            "settings": {
+                "filter_size": 3,
+                "in_channels": 16,
+                "name": 0,
+                "out_channels": 16,
+                "padding": 1,
+                "stride": 1
+            },
+            "type": "convolution"
+        },
+        {
+            "id": 19,
+            "name": "LRN4",
+            "pos": {
+                "x": 1031.6789428787388,
+                "y": 361.4197477932268
+            },
+            "settings": {
+                "in_channels": 16,
+                "name": 0
+            },
+            "type": "LRN"
+        },
+        {
+            "id": 20,
+            "name": "active4",
+            "pos": {
+                "x": 1126,
+                "y": 360
+            },
+            "settings": {
+                "in_channels": 16,
+                "name": 0,
+                "type": "relu"
+            },
+            "type": "Activation"
+        },
+        {
+            "id": 21,
+            "name": "pool2",
+            "pos": {
+                "x": 1282,
+                "y": 360
+            },
+            "settings": {
+                "height": 2,
+                "in_channels": 16,
+                "name": 0,
+                "stride": 2,
+                "width": 2
+            },
+            "type": "pooling"
+        },
+        {
+            "id": 22,
+            "name": "conv5",
+            "pos": {
+                "x": 487,
+                "y": 587
+            },
+            "settings": {
+                "filter_size": 3,
+                "in_channels": 16,
+                "name": 0,
+                "out_channels": 32,
+                "padding": 1,
+                "stride": 1
+            },
+            "type": "convolution"
+        },
+        {
+            "id": 23,
+            "name": "LRN5",
+            "pos": {
+                "x": 600,
+                "y": 587
+            },
+            "settings": {
+                "in_channels": 32,
+                "name": 0
+            },
+            "type": "LRN"
+        },
+        {
+            "id": 24,
+            "name": "active5",
+            "pos": {
+                "x": 717,
+                "y": 587
+            },
+            "settings": {
+                "in_channels": 32,
+                "name": 0,
+                "type": "relu"
+            },
+            "type": "Activation"
+        },
+        {
+            "id": 25,
+            "name": "conv6",
+            "pos": {
+                "x": 916.8090963363647,
+                "y": 585.415886759758
+            },
+            "settings": {
+                "filter_size": 3,
+                "in_channels": 32,
+                "name": 0,
+                "out_channels": 32,
+                "padding": 1,
+                "stride": 1
+            },
+            "type": "convolution"
+        },
+        {
+            "id": 26,
+            "name": "LRN6",
+            "pos": {
+                "x": 1016,
+                "y": 587
+            },
+            "settings": {
+                "in_channels": 32,
+                "name": 0
+            },
+            "type": "LRN"
+        },
+        {
+            "id": 27,
+            "name": "active6",
+            "pos": {
+                "x": 1125,
+                "y": 587
+            },
+            "settings": {
+                "in_channels": 32,
+                "name": 0,
+                "type": "relu"
+            },
+            "type": "Activation"
+        },
+        {
+            "id": 28,
+            "name": "pool3",
+            "pos": {
+                "x": 1276,
+                "y": 587
+            },
+            "settings": {
+                "height": 2,
+                "in_channels": 32,
+                "name": 0,
+                "stride": 2,
+                "width": 2
+            },
+            "type": "pooling"
+        },
+        {
+            "id": 3,
+            "name": "Affine1",
+            "pos": {
+                "x": 479,
+                "y": 810
+            },
+            "settings": {
+                "in_channels": 32,
+                "name": 0,
+                "out_channels": 100
+            },
+            "type": "Affine"
+        },
+        {
+            "id": 4,
+            "name": "active7",
+            "pos": {
+                "x": 599,
+                "y": 810
+            },
+            "settings": {
+                "in_channels": 100,
+                "name": 0,
+                "type": "relu"
+            },
+            "type": "Activation"
+        },
+        {
+            "id": 7,
+            "name": "dropout1",
+            "pos": {
+                "x": 726,
+                "y": 810
+            },
+            "settings": {
+                "in_channels": 100,
+                "name": 0,
+                "rate": 0.5
+            },
+            "type": "Dropout"
+        },
+        {
+            "id": 2,
+            "name": "Affine2",
+            "pos": {
+                "x": 1035,
+                "y": 810
+            },
+            "settings": {
+                "in_channels": 100,
+                "name": 0,
+                "out_channels": 71
+            },
+            "type": "Affine"
+        },
+        {
+            "id": 6,
+            "name": "dropout2",
+            "pos": {
+                "x": 1155,
+                "y": 810
+            },
+            "settings": {
+                "in_channels": 71,
+                "name": 0,
+                "rate": 0.5
+            },
+            "type": "Dropout"
+        }
+    ],
+    "config": {
+        "epoch": 10,
+        "batch": 100,
+        "optimizer": "Adagrad",
+        "lr": 0.01
+    }
+}

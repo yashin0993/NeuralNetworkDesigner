@@ -1,11 +1,13 @@
 /src/node_modules/*
 *.pyc
 .vscode
+data
 test
 *.pkl
 !/src/app/OCR/memory/model.pkl
 __pycache__
-*.json
 !/data/config.json
 !/src/package.json
 !/project/*
+**/create_info.json
+!project/project1/model/model.pkl

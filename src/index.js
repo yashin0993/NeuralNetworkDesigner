@@ -126,7 +126,7 @@ function open_file_dialog(opt){
         "title"   : "ファイル選択",
         "filters" : opt
     }, filename => {
-        MainWindow.webContents.send("open_file", filename);
+        MainWindow.webContents.send("open_file", filename[0]);
     });
 }
 
@@ -283,6 +283,7 @@ exports.predict_start = filename => {
 
     if(py_up != null){
         print("start_predict");
+        print(filename);
         py_up.stdin.write(filename + "\r\n");
     }
 };
@@ -290,10 +291,11 @@ exports.predict_start = filename => {
 var py_up = null;
 exports.up_python = () => {
     var py_name = path.join(path.parse(__dirname).dir, "src", "app", "OCR", "predict", "predictCNN.py");
-    
+    // var py_name = path.join(path.parse(__dirname).dir, "src", "app", "OCR", "predict", "test.py");
+    print(py_name);
     if(py_up == null){
         print("up_python");
-        py_up = spawn("python", [py_name], {encoding: "utf8", stdio: "pipe"}, err => {  });
+        py_up = spawn("python", [py_name], {encoding: "utf8", stdio: "pipe"}, err => { print("error"); });
         var str = "";
         var chunk_flg = false;
         py_up.stdout.on("data", chunk => {
@@ -360,7 +362,7 @@ exports.create_train_data = data => {
 var webcam_py = null;
 exports.cam_up_python = () => {
     var py_name = path.join(path.parse(__dirname).dir, "src", "app", "OCR", "predict", "webcam_predictCNN_v2.py");
-
+    console.log("debug");
     if(webcam_py == null){
         webcam_py = spawn("python", [py_name], {encoding: "utf8", stdio: "pipe"}, err => { if(err) throw err; });
         print("webcam_up_python");
@@ -399,7 +401,7 @@ exports.check_webcam_py = () => {
 exports.camera_predict = b64img => {
 
     if(webcam_py != null){
-        // print("send");
+        print("send");
         webcam_py.stdin.write(b64img + "\r\n");
     }
 };

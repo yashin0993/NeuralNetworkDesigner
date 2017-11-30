@@ -112,8 +112,8 @@ def main():
 
     ret, img = cap.read()
     # print(type(img))
-    if img == None:
-        return False
+    # if img == None:
+    #     return False
 
     img = np.array(img, dtype=np.uint8)
     # print(img.shape)

@@ -4,6 +4,7 @@
 data
 test
 *.pkl
+.log
 !/src/app/OCR/memory/model.pkl
 __pycache__
 !/data/config.json
